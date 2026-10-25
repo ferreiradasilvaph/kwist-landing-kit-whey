@@ -1,0 +1,13 @@
+# Configuração de build na Netlify.
+# A Netlify detecta o Next.js e aplica o runtime oficial (@netlify/plugin-nextjs).
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Prisma: gera o client no postinstall; o banco não é usado pela landing page.
+  DATABASE_URL = "file:./prisma/dev.db"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
