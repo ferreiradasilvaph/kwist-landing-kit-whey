@@ -8,7 +8,6 @@ import {
   imagens,
   ingredientes,
   itensKit,
-  linkAnuncio,
   marca,
   modoDeUso,
   precaucoes,
@@ -94,16 +93,8 @@ export default function Home() {
     <>
       {/* Herói */}
       <div className="hero-bg">
-        <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
+        <header className="mx-auto flex w-full max-w-6xl items-center px-4 py-5 sm:px-6">
           <Logo />
-          <a
-            href={linkAnuncio}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-snow transition-colors hover:border-cyan hover:text-cyan sm:inline-flex"
-          >
-            Ver anúncio no Mercado Livre
-          </a>
         </header>
 
         <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-4 sm:px-6 sm:pt-8 lg:pb-24">
@@ -356,6 +347,7 @@ export default function Home() {
                   alt=""
                   fill
                   sizes="224px"
+                  quality={90}
                   className="object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)]"
                 />
               </div>

@@ -73,6 +73,7 @@ export default function Galeria() {
               aria-hidden="true"
               fill
               sizes="(min-width: 1024px) 48vw, 100vw"
+              quality={75}
               className="scale-110 object-cover opacity-60 blur-2xl"
             />
             <span
@@ -105,6 +106,7 @@ export default function Galeria() {
               loading={ativo === 0 ? "eager" : "lazy"}
               fetchPriority={ativo === 0 ? "high" : "auto"}
               sizes="(min-width: 1024px) 48vw, 100vw"
+              quality={90}
               style={{
                 transform: ampliado ? `scale(${FATOR_ZOOM})` : "scale(1)",
                 transformOrigin: origem ? `${origem.x}% ${origem.y}%` : "50% 50%",
