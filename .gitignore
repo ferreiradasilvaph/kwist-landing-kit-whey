@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# sqlite local
+/dev.db*
+
+# screenshots do Playwright MCP
+/.playwright-mcp/
+
+# sqlite local (prisma)
+/prisma/dev.db*
+
+# manter o exemplo de env
+!.env.example

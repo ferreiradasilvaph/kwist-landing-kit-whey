@@ -1,0 +1,19 @@
+// Schema do Prisma. Documentacao: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// Modelo de exemplo. Substitua ou amplie conforme o conteudo de INSTRUCOES.md.
+model Produto {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  preco     Float
+  url       String?
+  criadoEm  DateTime @default(now())
+}

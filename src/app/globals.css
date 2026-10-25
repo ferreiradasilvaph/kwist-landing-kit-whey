@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
+/*
+  Paleta tirada da embalagem (imagem 1):
+  preto carbono do pote e do pacote, azul elétrico do logo,
+  ciano do selo "900G" e um toque do magenta neon da academia.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --carbon: #0e1013;
+  --surface: #171a1f;
+  --surface-2: #20252c;
+  --snow: #f4f6f8;
+  --mist: #a7b0ba;
+  --blue: #1a8ff0;
+  --blue-deep: #0d5fa8;
+  --cyan: #4cc2ff;
+  --neon: #c44fe0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-carbon: var(--carbon);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-snow: var(--snow);
+  --color-mist: var(--mist);
+  --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
+  --color-cyan: var(--cyan);
+  --color-neon: var(--neon);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bricolage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--carbon);
+  color: var(--snow);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Fundo do herói: carbono com foco azul (logo) e um rastro magenta (neon) */
+.hero-bg {
+  background-color: var(--carbon);
+  background-image:
+    radial-gradient(
+      55% 45% at 25% 35%,
+      rgba(26, 143, 240, 0.32),
+      transparent 70%
+    ),
+    radial-gradient(
+      40% 35% at 90% 10%,
+      rgba(196, 79, 224, 0.22),
+      transparent 70%
+    );
+}
+
+/* Textura de pontos como a da embalagem */
+.dots {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+}
+
+/* Botão principal: gradiente azul → ciano com texto escuro */
+.btn-blue {
+  background-image: linear-gradient(100deg, var(--blue) 0%, var(--cyan) 100%);
+  color: var(--carbon);
+  box-shadow: 0 10px 30px rgba(26, 143, 240, 0.35);
+}
+.btn-blue:hover {
+  filter: brightness(1.08);
+}
+
+/* Selo de desconto girado */
+.selo {
+  transform: rotate(-8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
