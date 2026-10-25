@@ -53,3 +53,5 @@ next-env.d.ts
 
 # manter o exemplo de env
 !.env.example
+
+.vercel

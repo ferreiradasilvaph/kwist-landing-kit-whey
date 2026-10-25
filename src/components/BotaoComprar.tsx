@@ -1,4 +1,4 @@
-import { linkAnuncio } from "@/lib/produto";
+import { linkCheckout } from "@/lib/produto";
 
 export default function BotaoComprar({
   compacto = false,
@@ -7,7 +7,7 @@ export default function BotaoComprar({
 }) {
   return (
     <a
-      href={linkAnuncio}
+      href={linkCheckout}
       target="_blank"
       rel="noopener noreferrer"
       className={`btn-blue inline-flex w-full items-center justify-center rounded-full font-bold transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-snow focus-visible:ring-offset-2 focus-visible:ring-offset-carbon ${

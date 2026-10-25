@@ -29,16 +29,16 @@ const destaques = [
 
 const garantias = [
   {
-    titulo: "Frete grátis",
-    texto: "Entrega pelo Mercado Livre, com rastreio na sua conta.",
+    titulo: "Pagamento seguro",
+    texto: "Pix, cartão ou boleto, processado pela Dotfy em ambiente criptografado.",
   },
   {
-    titulo: "Compra protegida",
-    texto: "Pagamento, troca e devolução garantidos pela plataforma.",
+    titulo: "Entrega rastreada",
+    texto: "Prazo e frete no checkout pelo CEP; código de rastreio por e-mail.",
   },
   {
     titulo: `Em até ${preco.parcelas}x`,
-    texto: "Cartão, Pix ou boleto, nas condições do anúncio.",
+    texto: "No cartão de crédito, com as condições exibidas no checkout.",
   },
 ];
 
@@ -118,7 +118,7 @@ export default function Home() {
                 </h1>
                 <p className="mt-5 max-w-xl text-base text-mist sm:text-lg">
                   {produto.nome}: energia antes, proteína depois e creatina
-                  todo dia. Compra feita e garantida pelo Mercado Livre.
+                  todo dia. Pagamento seguro por Pix, cartão ou boleto.
                 </p>
               </div>
 
@@ -152,15 +152,15 @@ export default function Home() {
                       {brl.format(preco.valorParcela)}
                     </span>
                   </p>
-                  {produto.freteGratis && (
-                    <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-blue/15 px-3 py-1 text-sm font-semibold text-cyan">
-                      <span
-                        aria-hidden="true"
-                        className="h-2 w-2 rounded-full bg-cyan"
-                      />
-                      Frete grátis pelo Mercado Livre
-                    </p>
-                  )}
+                  <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-blue/15 px-3 py-1 text-sm font-semibold text-cyan">
+                    <span
+                      aria-hidden="true"
+                      className="h-2 w-2 rounded-full bg-cyan"
+                    />
+                    {produto.freteGratis
+                      ? "Frete grátis para todo o Brasil"
+                      : "Frete calculado no checkout pelo CEP"}
+                  </p>
                 </div>
 
                 <SeletorSabor />
@@ -168,8 +168,8 @@ export default function Home() {
                 <div>
                   <BotaoComprar />
                   <p className="mt-3 text-center text-sm text-mist">
-                    Abre o anúncio em nova aba. Preço sujeito a alteração,
-                    confira o valor atual no Mercado Livre.
+                    Abre o checkout seguro em nova aba. Preço sujeito a
+                    alteração; o valor final aparece no checkout.
                   </p>
                 </div>
 
@@ -330,7 +330,7 @@ export default function Home() {
         <Secao
           id="faq"
           titulo="Perguntas frequentes"
-          subtitulo="Entrega, pagamento e troca acontecem pelo Mercado Livre."
+          subtitulo="Pagamento, entrega e troca, sem letra miúda."
         >
           <div className="max-w-3xl">
             <Faq />
@@ -360,8 +360,8 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 max-w-lg text-lg text-mist">
                   Kit completo por {brl.format(preco.atual)}, ou{" "}
-                  {preco.parcelas}x de {brl.format(preco.valorParcela)}, com
-                  frete grátis.
+                  {preco.parcelas}x de {brl.format(preco.valorParcela)} no
+                  cartão.
                 </p>
               </div>
             </div>
@@ -392,8 +392,8 @@ export default function Home() {
           <div>
             <Logo />
             <p className="mt-2 max-w-md text-sm text-mist">
-              {marca.slogan}. Esta página apresenta o produto; a venda é feita
-              pelo anúncio no Mercado Livre.
+              {marca.slogan}. Pagamentos processados pela Dotfy. Preço sujeito a
+              alteração sem aviso.
             </p>
           </div>
           <p className="text-xs text-mist/70">

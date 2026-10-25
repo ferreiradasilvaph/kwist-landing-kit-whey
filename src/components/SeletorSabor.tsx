@@ -37,7 +37,7 @@ export default function SeletorSabor() {
         })}
       </div>
       <p className="mt-2 text-xs text-mist">
-        O sabor é confirmado na hora da compra, dentro do anúncio.
+        O sabor é confirmado no checkout, na hora da compra.
       </p>
     </fieldset>
   );

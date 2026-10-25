@@ -17,7 +17,7 @@ const bricolage = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: `${produto.nome} | ${marca.nome}`,
   description:
-    "Whey protein, creatina, pré-treino e shaker em um só kit. Compra feita e garantida pelo Mercado Livre, com frete grátis.",
+    "Whey protein, creatina, pré-treino e shaker em um só kit. Pagamento seguro por Pix, cartão em até 12x ou boleto.",
   openGraph: {
     title: `${produto.nome} | ${marca.nome}`,
     images: ["/images/kit-recorte.webp"],

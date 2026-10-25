@@ -10,9 +10,12 @@ export const marca = {
   slogan: "Suplementos escolhidos a dedo",
 };
 
-/** Link do anúncio. Se tiver link de afiliado, substitua aqui. */
-export const linkAnuncio =
-  "https://produto.mercadolivre.com.br/MLB-3417706739-kit-whey-protein-isolado-creatina-pre-treino-shaker-_JM";
+/**
+ * Link do checkout na Dotfy (https://app.dotfy.com.br).
+ * Crie o produto no painel da Dotfy, copie o link de checkout e cole aqui.
+ * Enquanto for o valor provisório abaixo, o botão abre o checkout de exemplo.
+ */
+export const linkCheckout = "https://app.dotfy.com.br/checkout/SEU-PRODUTO";
 
 /** Preços consultados em 24/10/2026. Mudam com frequência. */
 export const preco = {
@@ -30,7 +33,8 @@ export const produto = {
   nome: "Kit Whey Protein + Creatina + Pré-Treino + Shaker",
   fabricante: "Bulk Nutrition",
   novo: true,
-  freteGratis: true,
+  /** true mostra "Frete grátis"; false mostra "Frete calculado no checkout". */
+  freteGratis: false,
 };
 
 export const sabores = ["Baunilha", "Chocolate", "Morango"] as const;
@@ -170,28 +174,33 @@ export const precaucoes = [
 
 export const faq = [
   {
-    pergunta: "Onde a compra é feita?",
+    pergunta: "Como funciona a compra?",
     resposta:
-      "O botão desta página abre o anúncio no Mercado Livre. Todo o pagamento, a entrega e a garantia acontecem por lá, com a proteção da plataforma.",
-  },
-  {
-    pergunta: "Como funciona a entrega?",
-    resposta:
-      "O frete é grátis pelo Mercado Livre. O prazo aparece no anúncio depois que você informa o CEP, e o rastreio fica disponível na sua conta.",
+      "O botão desta página abre o checkout seguro da Kwist, processado pela Dotfy. Você informa seus dados, escolhe o sabor e a forma de pagamento e recebe a confirmação por e-mail.",
   },
   {
     pergunta: "Quais formas de pagamento aceitam?",
     resposta:
-      "As do Mercado Livre: cartão de crédito em até 12 parcelas, Pix, boleto e saldo em conta. As condições de parcelamento são as exibidas no anúncio.",
+      "Pix, cartão de crédito em até 12 parcelas e boleto. As condições de parcelamento aparecem no checkout antes de você confirmar.",
+  },
+  {
+    pergunta: "Como funciona a entrega?",
+    resposta:
+      "O prazo e o valor do frete aparecem no checkout depois que você informa o CEP. Assim que o pedido é postado, você recebe o código de rastreio por e-mail.",
   },
   {
     pergunta: "Posso trocar ou devolver?",
     resposta:
-      "Sim. A troca e a devolução seguem as regras do Mercado Livre e podem ser pedidas direto pela sua compra, dentro do prazo informado lá.",
+      "Sim. Você pode desistir da compra em até 7 dias após o recebimento, como garante o Código de Defesa do Consumidor, desde que o produto esteja lacrado. Produto com defeito ou avaria é trocado sem custo. Fale com a gente pelo e-mail informado na confirmação do pedido.",
+  },
+  {
+    pergunta: "O pagamento é seguro?",
+    resposta:
+      "Sim. O pagamento é processado pela Dotfy em ambiente criptografado. Esta página não armazena dados de cartão nem dados pessoais.",
   },
   {
     pergunta: "O preço desta página é o final?",
     resposta:
-      "O preço muda com frequência. O valor aqui é uma referência; o preço válido é sempre o que aparece no anúncio na hora da compra.",
+      "O preço muda com frequência. O valor aqui é uma referência; o preço válido é sempre o que aparece no checkout na hora da compra.",
   },
 ];
