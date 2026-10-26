@@ -20,9 +20,9 @@ export const linkCheckout = "https://app.dotfy.com.br/checkout/SEU-PRODUTO";
 /** Preços consultados em 24/10/2026. Mudam com frequência. */
 export const preco = {
   anterior: 229.9,
-  atual: 134.9,
+  atual: 184.9,
   parcelas: 12,
-  valorParcela: 13.33,
+  valorParcela: 15.41,
 };
 
 export const descontoPercentual = Math.round(
